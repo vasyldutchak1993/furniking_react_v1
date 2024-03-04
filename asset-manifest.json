@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/furniking_react_v1/static/css/main.31d6cfe0.css",
-    "main.js": "/furniking_react_v1/static/js/main.83b09f90.js",
+    "main.css": "/furniking_react_v1/static/css/main.c7ec3132.css",
+    "main.js": "/furniking_react_v1/static/js/main.d366cf4d.js",
     "index.html": "/furniking_react_v1/index.html",
-    "main.83b09f90.js.map": "/furniking_react_v1/static/js/main.83b09f90.js.map"
+    "main.c7ec3132.css.map": "/furniking_react_v1/static/css/main.c7ec3132.css.map",
+    "main.d366cf4d.js.map": "/furniking_react_v1/static/js/main.d366cf4d.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.83b09f90.js"
+    "static/css/main.c7ec3132.css",
+    "static/js/main.d366cf4d.js"
   ]
 }

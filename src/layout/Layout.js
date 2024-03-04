@@ -2,6 +2,7 @@ import AppBar from "../components/navbar/AppBar";
 import {Outlet} from "react-router-dom";
 import {Suspense} from "react";
 import PageWrapper from "../components/containers/PageWrapper";
+import MainContainer from "../components/containers/MainContainer";
 
 function Layout(props) {
     return (
@@ -9,11 +10,11 @@ function Layout(props) {
             <header>
                 <AppBar/>
             </header>
-            <main>
+            <MainContainer>
                 <Suspense fallback={<h1>Loading....</h1>}>
                         <Outlet/>
                 </Suspense>
-            </main>
+            </MainContainer>
             <footer>
                 this is footer Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur blanditiis enim fugit id
                 minus numquam? Eos excepturi sed tempore.

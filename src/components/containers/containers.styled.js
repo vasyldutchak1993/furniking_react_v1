@@ -7,3 +7,6 @@ export const PageWrapperStyled=styled.div`
   background-color: #F8F9FA;
   min-height: 100vh;
 `
+export const MainContainerStyled=styled.main`
+   flex: 1 0 auto;
+`

@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/furniking_react_v1/static/css/main.31d6cfe0.css",
+    "main.js": "/furniking_react_v1/static/js/main.83b09f90.js",
+    "index.html": "/furniking_react_v1/index.html",
+    "main.83b09f90.js.map": "/furniking_react_v1/static/js/main.83b09f90.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.83b09f90.js"
+  ]
+}

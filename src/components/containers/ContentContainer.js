@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import {ContentContainerStyled} from "./containers.styled";
 
-function ContentContainer({children}) {
+function ContentContainer({children,...allyProps}) {
     return (
-        <ContentContainerStyled>{children}</ContentContainerStyled>
+        <ContentContainerStyled {...allyProps}>{children}</ContentContainerStyled>
     );
 }
 

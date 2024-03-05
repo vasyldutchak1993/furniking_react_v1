@@ -19,6 +19,12 @@ export const ContentContainerStyled=styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  &.rights-reserved-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+  }
 `
 export const TopBarContainerStyled=styled.div`
   width: 100%;
@@ -43,4 +49,8 @@ export const GridFooterContainer=styled.div`
   align-items: baseline;
   grid-column-gap: 5px;
   grid-row-gap: 0px;
+`
+export const FullWidthContainer=styled.div`
+  width: 100%;
+  border-top: 3px solid ${props => props.theme.colors.grey};
 `

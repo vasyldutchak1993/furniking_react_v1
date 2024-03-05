@@ -52,5 +52,5 @@ export const GridFooterContainer=styled.div`
 `
 export const FullWidthContainer=styled.div`
   width: 100%;
-  border-top: 3px solid ${props => props.theme.colors.grey};
+  border-top: 1px solid ${props => props.theme.colors.grey};
 `

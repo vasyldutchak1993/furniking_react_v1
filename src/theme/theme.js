@@ -8,6 +8,7 @@ export const theme = Object.freeze({
         black: "#010101",
         red: '#f44336',
         blue: '#2196f3',
+        grey:"#969696",
     },
     iconSize: {
         sm: 16,

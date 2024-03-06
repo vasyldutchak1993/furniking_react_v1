@@ -1,45 +1,38 @@
 import React from 'react';
 import ContentContainer from "../containers/ContentContainer";
-import {GridFooterContainer} from "../containers/containers.styled";
+import {FullWidthContainer, GridFooterContainer} from "../containers/containers.styled";
+import {RightsReserved, RightsReservedLink, RightsReservedLinks} from "./footer.styled";
+import {footerConfig,socialLinksConfig} from "./footerConfig";
+import FooterMenuList from "./FooterMenuList";
+import {FooterSocialContainer, FooterSocialText} from "./footerMenu.styled";
+import SocialItems from "./SocialItems";
+import Logo from "../logo/Logo";
 
 function Footer(props) {
     return (
         <footer>
             <ContentContainer>
-                <GridFooterContainer>
-                    <div className="social-container">
-                        <div className="logo-container"></div>
-                        <div className="social-text">Funking is the a popular Ecommerce site. Lorem ipsum dolor sit
+                <GridFooterContainer className='mb-30'>
+                    <FooterSocialContainer>
+                        <Logo/>
+                        <FooterSocialText>Funking is the a popular Ecommerce site. Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        </div>
-                        <div className="social-links-container">
-                            <a href="#" className="social-link">in</a>
-                            <a href="#" className="social-link">fe</a>
-                            <a href="#" className="social-link">tw</a>
-                            <a href="#" className="social-link">pi</a>
-                        </div>
-                    </div>
-                    <div className="footer-menu">
-                        <div className="footer-menu-title">help</div>
-                    </div>
-                    <div className="footer-menu">
-                        <div className="footer-menu-title">Store</div>
-                    </div>
-                    <div className="footer-menu">
-                        <div className="footer-menu-title">Supports</div>
-                    </div>
+                        </FooterSocialText>
+                        <SocialItems items={socialLinksConfig}/>
+                    </FooterSocialContainer>
+                    <FooterMenuList items={footerConfig}/>
                 </GridFooterContainer>
             </ContentContainer>
-            <ContentContainer className="rights-reserved-container">
-                <div>
-                    <div className="rights-reserved">© 2021 Funking - All rights reserved.</div>
-                    <div className="rights-reserved-links">
-                        <a href="#" className="rights-reserved-link">Privacy</a>
-                        <a href="#"className="rights-reserved-link">Security</a>
-                        <a href="#" className="rights-reserved-link">Terms</a>
-                    </div>
-                </div>
-            </ContentContainer>
+            <FullWidthContainer>
+                <ContentContainer className="rights-reserved-container">
+                    <RightsReserved>© 2021 Funking - All rights reserved.</RightsReserved>
+                    <RightsReservedLinks>
+                        <RightsReservedLink to='privacy_policy'>Privacy</RightsReservedLink>
+                        <RightsReservedLink to='security'>Security</RightsReservedLink>
+                        <RightsReservedLink to='terms'>Terms</RightsReservedLink>
+                    </RightsReservedLinks>
+                </ContentContainer>
+            </FullWidthContainer>
         </footer>
     );
 }

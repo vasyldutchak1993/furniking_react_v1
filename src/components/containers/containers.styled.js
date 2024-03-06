@@ -4,7 +4,7 @@ export const PageWrapperStyled=styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #F8F9FA;
+  background-color: ${props=>props.theme.colors.white};
   min-height: 100vh;
 `
 export const MainContainerStyled=styled.main`
@@ -24,6 +24,12 @@ export const ContentContainerStyled=styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 25px 0;
+  }
+  &.d-flex-menu{
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    height: inherit;
   }
 `
 export const TopBarContainerStyled=styled.div`

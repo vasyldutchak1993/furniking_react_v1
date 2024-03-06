@@ -46,9 +46,13 @@ export const GridFooterContainer=styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  align-items: baseline;
-  grid-column-gap: 5px;
+  grid-column-gap: 20px;
   grid-row-gap: 0px;
+  place-items: end;
+  align-items: baseline;
+  &.mb-30{
+    margin-bottom: 30px;
+  }
 `
 export const FullWidthContainer=styled.div`
   width: 100%;

@@ -64,3 +64,17 @@ export const FullWidthContainer=styled.div`
   width: 100%;
   border-top: 1px solid ${props => props.theme.colors.grey};
 `
+
+export const FeatureContainer=styled.div`
+/*  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  place-items: end;
+  align-items: baseline;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+`

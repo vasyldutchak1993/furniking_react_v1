@@ -6,4 +6,5 @@ export const SectionTitleStyled=styled.div`
   font-size: 36px;
   font-weight:  ${props => props.theme.fontWeight.bolder};
   text-align: center;
+  text-transform: uppercase;
 `

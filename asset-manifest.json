@@ -1,26 +1,34 @@
 {
   "files": {
     "main.css": "/furniking_react_v1/static/css/main.d350346f.css",
-    "main.js": "/furniking_react_v1/static/js/main.6bbd9eba.js",
-    "static/js/624.bd6f6204.chunk.js": "/furniking_react_v1/static/js/624.bd6f6204.chunk.js",
-    "static/js/21.caa4560f.chunk.js": "/furniking_react_v1/static/js/21.caa4560f.chunk.js",
+    "main.js": "/furniking_react_v1/static/js/main.0973b553.js",
+    "static/js/412.5abae572.chunk.js": "/furniking_react_v1/static/js/412.5abae572.chunk.js",
+    "static/js/451.ebbef1e7.chunk.js": "/furniking_react_v1/static/js/451.ebbef1e7.chunk.js",
     "static/media/post_3.png": "/furniking_react_v1/static/media/post_3.13c0e3483ee1b05c321e.png",
     "static/media/furniture_big.png": "/furniking_react_v1/static/media/furniture_big.b70a8083b84edd781a88.png",
     "static/media/post_1.png": "/furniking_react_v1/static/media/post_1.44bccc3e4fb601d57b45.png",
     "static/media/post_2.png": "/furniking_react_v1/static/media/post_2.6417828fe69e8ce575b8.png",
+    "static/media/product_5.png": "/furniking_react_v1/static/media/product_5.7de9cb230b75955fc13c.png",
+    "static/media/product_4.png": "/furniking_react_v1/static/media/product_4.431f73fb23ccd145ed53.png",
+    "static/media/product_3.png": "/furniking_react_v1/static/media/product_3.d84f48cef09ba0f835ec.png",
     "static/media/post_4.png": "/furniking_react_v1/static/media/post_4.7ff4828dc4eeeb734f79.png",
+    "static/media/product_1.png": "/furniking_react_v1/static/media/product_1.ab41855d630df17420f2.png",
     "static/media/offer_2.png": "/furniking_react_v1/static/media/offer_2.4f0c8983c3c834f698f0.png",
     "static/media/furniture_top.png": "/furniking_react_v1/static/media/furniture_top.6482c8a550a7317fe67f.png",
+    "static/media/product_7.png": "/furniking_react_v1/static/media/product_7.dc733c7d590a17dc9aba.png",
+    "static/media/product_6.png": "/furniking_react_v1/static/media/product_6.3cf0ccf28779a322d2f8.png",
     "static/media/Offer_1.png": "/furniking_react_v1/static/media/Offer_1.95cd2b0a0769708f6839.png",
+    "static/media/product_2.png": "/furniking_react_v1/static/media/product_2.d11b04755483ca6b499a.png",
+    "static/media/customer.png": "/furniking_react_v1/static/media/customer.b50e1bf62955182b6612.png",
     "static/media/log.svg": "/furniking_react_v1/static/media/log.171980688a8f675a13b448091ba13a61.svg",
     "index.html": "/furniking_react_v1/index.html",
     "main.d350346f.css.map": "/furniking_react_v1/static/css/main.d350346f.css.map",
-    "main.6bbd9eba.js.map": "/furniking_react_v1/static/js/main.6bbd9eba.js.map",
-    "624.bd6f6204.chunk.js.map": "/furniking_react_v1/static/js/624.bd6f6204.chunk.js.map",
-    "21.caa4560f.chunk.js.map": "/furniking_react_v1/static/js/21.caa4560f.chunk.js.map"
+    "main.0973b553.js.map": "/furniking_react_v1/static/js/main.0973b553.js.map",
+    "412.5abae572.chunk.js.map": "/furniking_react_v1/static/js/412.5abae572.chunk.js.map",
+    "451.ebbef1e7.chunk.js.map": "/furniking_react_v1/static/js/451.ebbef1e7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d350346f.css",
-    "static/js/main.6bbd9eba.js"
+    "static/js/main.0973b553.js"
   ]
 }

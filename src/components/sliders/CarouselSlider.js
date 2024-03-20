@@ -1,6 +1,6 @@
 import {Children, cloneElement, useEffect, useRef, useState} from 'react'
 import {Page} from './Page'
-import {CarouselContext} from './../../contexts/carouselContext'
+import {CarouselContext} from '../../contexts/carouselContext'
 import {MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos} from "react-icons/md";
 import {CarouselStyled} from "./carousel.styled";
 import {nanoid} from "nanoid";
@@ -22,7 +22,7 @@ export const CarouselSlider = ({children, infinite}) => {
             const lastElement = cloneElement(children[0], {key: nanoid()})
             setPages([
                 firstElement, // head: 1
-                ...Children.map(children, chield => cloneElement(chield)),
+                ...Children.map(children, child => cloneElement(child)),
                 lastElement, // tail: 1
             ])
             setClonesCount({head: 1, tail: 1})
@@ -56,7 +56,7 @@ export const CarouselSlider = ({children, infinite}) => {
     }, [transitionDuration])
 
     useEffect(() => {
-        if (!infinite) return
+
 
         // с элемента 0 (clone) -> к предпоследнему (реальный)
         if (offset === 0) {
@@ -64,7 +64,6 @@ export const CarouselSlider = ({children, infinite}) => {
                 setTransitionDuration(0)
                 setOffset(-(width * (pages.length - 1 - clonesCount.tail)))
             }, TRANSITION_DURATION)
-            return
         }
         // с элемента n (clone) -> к элементу 1 (реальный)
         if (offset === -(width * (pages.length - 1))) {
@@ -72,7 +71,6 @@ export const CarouselSlider = ({children, infinite}) => {
                 setTransitionDuration(0)
                 setOffset(-(clonesCount.head * width))
             }, TRANSITION_DURATION)
-            return
         }
     }, [offset, infinite, pages, clonesCount, width])
 

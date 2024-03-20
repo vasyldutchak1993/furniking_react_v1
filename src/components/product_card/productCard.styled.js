@@ -14,12 +14,20 @@ export const ProductCardContainer=styled.div`
     width: 100%;
     height: auto;
     overflow: hidden;
-
+    
+    img{
+      transition: all .3s;
+      cursor: pointer;
+    }
+    
     &:hover {
       .product_card_actions_container {
         right: 0;
         bottom: 0;
         visibility: visible;
+      }
+      img{
+        transform: scale(1.1);
       }
     }
 

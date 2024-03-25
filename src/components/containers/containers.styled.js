@@ -37,10 +37,12 @@ export const TopBarContainerStyled=styled.div`
   background: ${props => props.theme.colors.green};
 `
 export const ActionContainer=styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0;
+    
 `
 
 export const FlexContainer=styled.div`
@@ -77,4 +79,20 @@ export const FeatureContainer=styled.div`
   align-items: center;
   justify-content: space-between;
   column-gap: 20px;
+`
+
+export const SearchContainer=styled.div`
+    max-width: 582px;
+    width: 100%;
+    position: relative;
+    .data_search_view_container{
+        position: absolute;
+        z-index: 1000;
+        top: calc(100% + 10px);
+        width: 100%;
+        padding: 20px 0;
+        border: 1px dashed black;
+        background: antiquewhite;
+        transition: all 1s;
+    }
 `

@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/furniking_react_v1/static/css/main.d350346f.css",
-    "main.js": "/furniking_react_v1/static/js/main.8a7987c0.js",
-    "static/js/787.f36d4c81.chunk.js": "/furniking_react_v1/static/js/787.f36d4c81.chunk.js",
-    "static/js/122.0e3d0a57.chunk.js": "/furniking_react_v1/static/js/122.0e3d0a57.chunk.js",
+    "main.js": "/furniking_react_v1/static/js/main.16a18b3b.js",
+    "static/js/809.e1dbf382.chunk.js": "/furniking_react_v1/static/js/809.e1dbf382.chunk.js",
+    "static/js/122.6f5cba4b.chunk.js": "/furniking_react_v1/static/js/122.6f5cba4b.chunk.js",
     "static/media/post_3.png": "/furniking_react_v1/static/media/post_3.13c0e3483ee1b05c321e.png",
     "static/media/furniture_big.png": "/furniking_react_v1/static/media/furniture_big.b70a8083b84edd781a88.png",
     "static/media/post_1.png": "/furniking_react_v1/static/media/post_1.44bccc3e4fb601d57b45.png",
+    "static/media/furniture.png": "/furniking_react_v1/static/media/furniture.9c6fd5701612e92a9e2d.png",
     "static/media/post_2.png": "/furniking_react_v1/static/media/post_2.6417828fe69e8ce575b8.png",
     "static/media/product_5.png": "/furniking_react_v1/static/media/product_5.7de9cb230b75955fc13c.png",
     "static/media/product_4.png": "/furniking_react_v1/static/media/product_4.431f73fb23ccd145ed53.png",
@@ -23,12 +24,12 @@
     "static/media/log.svg": "/furniking_react_v1/static/media/log.171980688a8f675a13b448091ba13a61.svg",
     "index.html": "/furniking_react_v1/index.html",
     "main.d350346f.css.map": "/furniking_react_v1/static/css/main.d350346f.css.map",
-    "main.8a7987c0.js.map": "/furniking_react_v1/static/js/main.8a7987c0.js.map",
-    "787.f36d4c81.chunk.js.map": "/furniking_react_v1/static/js/787.f36d4c81.chunk.js.map",
-    "122.0e3d0a57.chunk.js.map": "/furniking_react_v1/static/js/122.0e3d0a57.chunk.js.map"
+    "main.16a18b3b.js.map": "/furniking_react_v1/static/js/main.16a18b3b.js.map",
+    "809.e1dbf382.chunk.js.map": "/furniking_react_v1/static/js/809.e1dbf382.chunk.js.map",
+    "122.6f5cba4b.chunk.js.map": "/furniking_react_v1/static/js/122.6f5cba4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d350346f.css",
-    "static/js/main.8a7987c0.js"
+    "static/js/main.16a18b3b.js"
   ]
 }

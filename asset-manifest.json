@@ -1,9 +1,12 @@
 {
   "files": {
     "main.css": "/furniking_react_v1/static/css/main.d350346f.css",
-    "main.js": "/furniking_react_v1/static/js/main.601c417a.js",
-    "static/js/809.e1dbf382.chunk.js": "/furniking_react_v1/static/js/809.e1dbf382.chunk.js",
-    "static/js/122.6f5cba4b.chunk.js": "/furniking_react_v1/static/js/122.6f5cba4b.chunk.js",
+    "main.js": "/furniking_react_v1/static/js/main.7777986f.js",
+    "static/js/49.845bcf11.chunk.js": "/furniking_react_v1/static/js/49.845bcf11.chunk.js",
+    "static/js/811.67c27da8.chunk.js": "/furniking_react_v1/static/js/811.67c27da8.chunk.js",
+    "static/js/344.d213a3b0.chunk.js": "/furniking_react_v1/static/js/344.d213a3b0.chunk.js",
+    "static/js/259.2d946a4e.chunk.js": "/furniking_react_v1/static/js/259.2d946a4e.chunk.js",
+    "static/js/423.f90408f1.chunk.js": "/furniking_react_v1/static/js/423.f90408f1.chunk.js",
     "static/media/post_3.png": "/furniking_react_v1/static/media/post_3.13c0e3483ee1b05c321e.png",
     "static/media/furniture_big.png": "/furniking_react_v1/static/media/furniture_big.b70a8083b84edd781a88.png",
     "static/media/post_1.png": "/furniking_react_v1/static/media/post_1.44bccc3e4fb601d57b45.png",
@@ -24,12 +27,15 @@
     "static/media/log.svg": "/furniking_react_v1/static/media/log.171980688a8f675a13b448091ba13a61.svg",
     "index.html": "/furniking_react_v1/index.html",
     "main.d350346f.css.map": "/furniking_react_v1/static/css/main.d350346f.css.map",
-    "main.601c417a.js.map": "/furniking_react_v1/static/js/main.601c417a.js.map",
-    "809.e1dbf382.chunk.js.map": "/furniking_react_v1/static/js/809.e1dbf382.chunk.js.map",
-    "122.6f5cba4b.chunk.js.map": "/furniking_react_v1/static/js/122.6f5cba4b.chunk.js.map"
+    "main.7777986f.js.map": "/furniking_react_v1/static/js/main.7777986f.js.map",
+    "49.845bcf11.chunk.js.map": "/furniking_react_v1/static/js/49.845bcf11.chunk.js.map",
+    "811.67c27da8.chunk.js.map": "/furniking_react_v1/static/js/811.67c27da8.chunk.js.map",
+    "344.d213a3b0.chunk.js.map": "/furniking_react_v1/static/js/344.d213a3b0.chunk.js.map",
+    "259.2d946a4e.chunk.js.map": "/furniking_react_v1/static/js/259.2d946a4e.chunk.js.map",
+    "423.f90408f1.chunk.js.map": "/furniking_react_v1/static/js/423.f90408f1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d350346f.css",
-    "static/js/main.601c417a.js"
+    "static/js/main.7777986f.js"
   ]
 }

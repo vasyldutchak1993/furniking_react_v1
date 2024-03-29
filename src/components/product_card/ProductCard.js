@@ -8,6 +8,7 @@ import {MdAddShoppingCart, MdPreview} from "react-icons/md";
 import {Link} from "react-router-dom";
 import StarRating from "../rating/StarRating";
 import {useLocalStorage} from "../../hooks/useLocalStorage";
+import {basketContext} from "../../contexts/basketContext";
 
 
 function ProductCard({id, chip, img, productType, productTitle, price, rating}) {
@@ -15,6 +16,7 @@ function ProductCard({id, chip, img, productType, productTitle, price, rating}) 
     const [favorite, setFavorite] = useLocalStorage(FAVORITE_KEY, null)
     const {currency} = useContext(currencyContext)
     const [isFavorite, setIsFavorite] = useState(favorite!==null)
+    const{addToBasket}=useContext(basketContext)
 
     const toggleFavorites = ({id, chip, img, productType, productTitle, price, rating}) => {
         if (favorite) {
@@ -26,6 +28,9 @@ function ProductCard({id, chip, img, productType, productTitle, price, rating}) 
         }
     }
 
+    const handleClick = (product) => {
+      addToBasket(product)
+    }
 
 
     return (
@@ -38,7 +43,9 @@ function ProductCard({id, chip, img, productType, productTitle, price, rating}) 
                             toggleFavorites({id, chip, img, productType, productTitle, price, rating})
                         }}/>
                     </div>
-                    <div className="product_action_item">
+                    <div className="product_action_item" onClick={()=>{
+                        handleClick({id, chip, img, productType, productTitle, price, rating})
+                    }}>
                         <MdAddShoppingCart/>
                     </div>
                     <div className="product_action_item">

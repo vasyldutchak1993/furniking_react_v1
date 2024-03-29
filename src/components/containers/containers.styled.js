@@ -16,21 +16,24 @@ export const HeaderContainerStyled=styled.header`
   flex-direction: column;
 `
 export const ContentContainerStyled=styled.div`
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  &.rights-reserved-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px 0;
-  }
-  &.d-flex-menu{
-    display: flex;
-    column-gap: 30px;
-    align-items: center;
-    height: inherit;
-  }
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &.rights-reserved-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0;
+    }
+
+    &.d-flex-menu {
+        display: flex;
+        column-gap: 30px;
+        align-items: center;
+        height: inherit;
+    }
 `
 export const TopBarContainerStyled=styled.div`
   width: 100%;
@@ -94,5 +97,56 @@ export const SearchContainer=styled.div`
         border: 1px dashed black;
         background: antiquewhite;
         transition: all 1s;
+    }
+`
+export const BasketContainerStyled=styled.div`
+    width: 100%;
+
+    .table_header,.row {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        padding: 10px 0;
+        place-items: center;
+    }
+    .table_header{
+        padding: 15px 0;
+        background: ${props=>props.theme.colors.primaryText};
+        color: ${props=>props.theme.colors.white};
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        &.d_flex{
+            display: flex;
+            padding: 15px;
+            .price{
+                color: #7AC751;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+    .serial_number{
+        grid-area: 1 / 1 / 2 / 2;
+        padding-left: 5px;
+    }
+    .product{
+        grid-area: 1 / 2 / 2 / 6;
+    }
+    .quantity{
+        grid-area: 1 / 6 / 2 / 9;
+    }
+    .price{
+        grid-area: 1 / 9 / 2 / 11;
+    }
+    .total{
+        grid-area: 1 / 11 / 2 / 13;
+    }
+    .table_body{
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
     }
 `

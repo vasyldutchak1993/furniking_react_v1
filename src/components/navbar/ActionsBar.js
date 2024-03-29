@@ -1,10 +1,12 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 import ContentContainer from "../containers/ContentContainer";
 import {ActionContainer, FlexContainer, SearchContainer} from "../containers/containers.styled";
 import Logo from "../logo/Logo";
 import SearchForm from "../search_form/SearchForm";
 import {FaBell, FaShoppingBag, FaUser} from "react-icons/fa";
 import IconButton from "../icon_button/IconButton";
+import {basketContext} from "../../contexts/basketContext";
+import {Navigate, useNavigate} from "react-router-dom";
 
 const data = [
     {id: 1, title: "lorem", price: "$126",category:'chair'},
@@ -17,12 +19,13 @@ const data = [
 ]
 
 function ActionsBar(props) {
+    const {items}=useContext(basketContext)
     const [query, setQuery] = useState('')
     const [currentCategory, setCurrentCategory] = useState('')
-    const [items, setItems] = useState([])
-
+    const [categoryItems, setCategoryItems] = useState([])
+    const navigate=useNavigate()
     useEffect(() => {
-        setItems(data)
+        setCategoryItems(data)
     }, [])
     const onSubmit = ({searchQuery, currentCategory}) => {
         setQuery(searchQuery)
@@ -30,8 +33,8 @@ function ActionsBar(props) {
     }
 
     const filteredData = useMemo(() => {
-        return items.filter(el => el.title.includes(query) && el.category===currentCategory)
-    }, [query, items,currentCategory])
+        return categoryItems.filter(el => el.title.includes(query) && el.category===currentCategory)
+    }, [query, categoryItems,currentCategory])
 
     return (
         <ContentContainer>
@@ -49,7 +52,9 @@ function ActionsBar(props) {
                         </div>}
                 </SearchContainer>
                 <FlexContainer>
-                    <IconButton chip={"4"}><FaShoppingBag/></IconButton>
+                    <IconButton chip={items.length} onClick={()=>{
+                        navigate('/basket')
+                    }}><FaShoppingBag/></IconButton>
                     <IconButton><FaBell/></IconButton>
                     <IconButton><FaUser/></IconButton>
                 </FlexContainer>

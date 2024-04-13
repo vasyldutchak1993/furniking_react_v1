@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import media from "styled-media-query";
+import {BREAK_POINTS} from "../../utils/breakPoints";
 
 export const ProductsListContainer=styled.div`
   display: grid;
@@ -6,6 +8,20 @@ export const ProductsListContainer=styled.div`
   grid-auto-rows:1fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+
+    ${media.lessThan(BREAK_POINTS.LARGE)`
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows:1fr;
+    `}
+
+    ${media.lessThan(BREAK_POINTS.MEDIUM)`
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows:1fr;
+    `}
+    ${media.lessThan('550px')`
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows:1fr;
+    `}
 `
 
 export const PaginationContainer=styled.div`
@@ -13,7 +29,10 @@ export const PaginationContainer=styled.div`
   align-items: center;
   justify-content: flex-end;
   column-gap: 20px;
-
+    margin-top: 25px;
+    ${media.lessThan(BREAK_POINTS.MEDIUM)`
+        margin-bottom:25px;
+    `}
   .btn {
     border: none;
     outline: none;

@@ -5,6 +5,7 @@ export const TabsHeader=styled.div`
   align-items: center;
   column-gap: 15px;
   justify-content: center;
+    margin-bottom: 25px;
   color: ${props=>props.theme.colors.secondaryText};
   .active_tab{
     color: ${props=>props.theme.colors.green};
@@ -15,6 +16,7 @@ export const TabsHeader=styled.div`
     font-weight: ${props=>props.theme.fontWeight.bold};
     line-height: 30px;
     color: ${props=>props.theme.colors.secondaryText};
+      text-transform: uppercase;
     transition: color .2s;
     &:hover{
       cursor: pointer;

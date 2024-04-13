@@ -14,7 +14,7 @@ function Tabs({data}) {
         <>
             <TabsHeader className="tabs_header">
                 {data.map(({label},idx)=>(
-                    <div key={label} className={activeTab===idx ? 'active_tab' : ''} onClick={()=>{
+                    <div key={label} className={`${activeTab===idx ? 'active_tab' : ''}`} onClick={()=>{
                         handleClick(idx)
                     }}>{label}</div>
                 ))}

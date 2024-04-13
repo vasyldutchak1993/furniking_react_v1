@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {ContactFormContainer} from "./contactForm.styled";
 import {IoSend} from "react-icons/io5";
 import * as Yup from 'yup';

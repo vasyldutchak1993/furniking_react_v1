@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import media from "styled-media-query";
+import {BREAK_POINTS} from "../../utils/breakPoints";
 
 export const ArticlesContainer=styled.div`
   display: grid;
@@ -6,6 +8,11 @@ export const ArticlesContainer=styled.div`
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
+
+    ${media.lessThan(BREAK_POINTS.MEDIUM)`
+       grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    `}
 `
 
 export const ArticleCardContainer=styled.div`

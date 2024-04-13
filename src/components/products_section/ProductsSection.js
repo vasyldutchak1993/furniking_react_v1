@@ -4,17 +4,17 @@ import ProductsView from "../products_list_view/ProductsView";
 import Tabs from "../tab/Tabs";
 const tabs = [
     {
-        label: "All Products",
-        component: <ProductsView productsType='Sofa'/>
+        label: "sofa",
+        component: <ProductsView productsType='sofa' key={'sofa'}/>
     },{
-        label:"Best Sellers",
-        component: <ProductsView productsType='Tabble'/>
+        label:"new",
+        component: <ProductsView productsType='new' key={'new'}/>
     },{
-        label: "New Arrivals",
-        component: <ProductsView productsType='Chair'/>
+        label: "furniture",
+        component: <ProductsView productsType='furniture' key={'furniture'}/>
     },{
-        label: "Todays Deals",
-        component: <ProductsView productsType='Furniture'/>
+        label: "tabble",
+        component: <ProductsView productsType='tabble' key={'tabble'}/>
     }
 ]
 function ProductsSection(props) {

@@ -58,7 +58,9 @@ function ActionsBar(props) {
                     <IconButton onClick={()=>{
                         navigate('/favorite')
                     }}><FaBell/></IconButton>
-                    <IconButton><FaUser/></IconButton>
+                    <IconButton onClick={()=>{
+                        navigate('/login')
+                    }}><FaUser/></IconButton>
                 </FlexContainer>
             </ActionContainer>
         </ContentContainer>

@@ -47,12 +47,12 @@ function FavoritePage(props) {
                     />
                 ))}
             </ProductsListContainer>
-            <ProductsListContainer>
+            {/*<ProductsListContainer>
                 <ProductCardLoading/>
                 <ProductCardLoading/>
                 <ProductCardLoading/>
                 <ProductCardLoading/>
-            </ProductsListContainer>
+            </ProductsListContainer>*/}
 
             <button onClick={() => {
                 saveToLocalStorage({id:1})

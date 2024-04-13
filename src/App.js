@@ -12,6 +12,7 @@ const BlogPage = lazy(() => import('./pages/BlogPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const BlogItemPage = lazy(() => import('./pages/BlogItemPage'))
 const ProductDetailPage=lazy(()=>import("./pages/ProductDetailPage"))
+const LoginPage=lazy(()=>import("./pages/LoginPage"))
 function App() {
     return (
         <Routes>
@@ -25,6 +26,7 @@ function App() {
                 <Route path='contact' element={<ContactPage/>}/>
                 <Route path='basket' element={<BasketPage/>}/>
                 <Route path='favorite' element={<FavoritePage/>}/>
+                <Route path='login' element={<LoginPage/>}/>
                 <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
             </Route>
         </Routes>

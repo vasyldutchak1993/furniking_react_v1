@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import {ProductCardContainer} from "./productCard.styled";
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import {currencyContext} from "../../contexts/currencyContext";
 import {FaRegHeart} from "react-icons/fa";
 import {RxUpdate} from "react-icons/rx";
@@ -57,7 +57,7 @@ function ProductCard({id, chip, img, productType, productTitle, price, rating}) 
                 </div>
             </div>
             <div className="product_card_type">{productType}</div>
-            <Link to={`products/${id}`} className="product_card_title">{productTitle}</Link>
+            <Link to={`/product/${id}`}  className="product_card_title">{productTitle}</Link>
             <div className="product_card_box">
                 <div className="product_card_price_box">
                     <div className="product_card_currentPrice">{currency}{price.currentPrice}</div>

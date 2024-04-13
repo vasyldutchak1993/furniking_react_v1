@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {getKeyEventProps} from "@testing-library/user-event/dist/keyboard/getEventProps";
 
 export const ProductCardContainer=styled.div`
   width: 100%;
@@ -12,7 +11,8 @@ export const ProductCardContainer=styled.div`
   .product_card_header_container {
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 222px;
+    height: 100%;
     overflow: hidden;
     
     img{

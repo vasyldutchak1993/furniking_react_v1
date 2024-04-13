@@ -90,7 +90,8 @@ export const OfferCardContainer=styled.div`
     color: ${props => props.theme.colors.secondaryText};
     font-size: 12px;
     font-weight: ${props => props.theme.fontWeight.normal};
-    width: 50%;
+      max-width: 50%;
+    width: 100%;
   }
 
   .price_container {
@@ -139,8 +140,7 @@ export const OfferCardContainer=styled.div`
   .sales_container {
     display: flex;
     align-items: center;
-    width: 50%;
-    justify-content: space-between;
+    column-gap: 5px;
 
     .sale_item {
       width: 50px;

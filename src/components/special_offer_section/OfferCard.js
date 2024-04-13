@@ -22,7 +22,7 @@ function OfferCard({title,text,img,alt,defaultPrice,currentPrice,dateStart,dateE
                 <div className="currentPrice">{currency}{currentPrice}</div>
                 <div className="defaultPrice">{currency}{defaultPrice}</div>
                 <button type='button' className='btn_offer' onClick={(event)=>{
-                    navigate(`shop/${id}`)
+                    navigate(`product/${id}`)
                 }}>SHOP NOW</button>
             </div>
             <div className="sales_container" ref={salesContainer}>

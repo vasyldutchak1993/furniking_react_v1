@@ -5,6 +5,7 @@ import MainContainer from "../components/containers/MainContainer";
 import ContentContainer from "../components/containers/ContentContainer";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
+import PageContentLoader from "../components/loaders/PageContentLoader";
 
 function Layout(props) {
     return (
@@ -12,7 +13,7 @@ function Layout(props) {
             <Header/>
             <MainContainer>
                 <ContentContainer>
-                    <Suspense fallback={<h1>Loading....</h1>}>
+                    <Suspense fallback={<PageContentLoader/>}>
                         <Outlet/>
                     </Suspense>
                 </ContentContainer>

@@ -11,6 +11,5 @@ export const SectionTitleStyled=styled.div`
     text-transform: uppercase;
     margin: 25px;
     ${media.lessThan(BREAK_POINTS.MEDIUM)`
-        display:none;
     `}
 `

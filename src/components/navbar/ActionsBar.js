@@ -6,7 +6,7 @@ import SearchForm from "../search_form/SearchForm";
 import {FaBell, FaShoppingBag, FaUser} from "react-icons/fa";
 import IconButton from "../icon_button/IconButton";
 import {basketContext} from "../../contexts/basketContext";
-import {Navigate, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const data = [
     {id: 1, title: "lorem", price: "$126",category:'chair'},
@@ -38,9 +38,9 @@ function ActionsBar(props) {
 
     return (
         <ContentContainer>
-            <ActionContainer>
+            <ActionContainer className='action_container_fluid'>
                 <Logo/>
-                <SearchContainer className="search_container">
+                <SearchContainer className="search_container search_cell">
                     <SearchForm onSubmit={onSubmit}/>
                     {query &&
                         <div className="data_search_view_container">
@@ -51,11 +51,13 @@ function ActionsBar(props) {
                                 </div>))}
                         </div>}
                 </SearchContainer>
-                <FlexContainer>
+                <FlexContainer className='actions_cell'>
                     <IconButton chip={items.length} onClick={()=>{
                         navigate('/basket')
                     }}><FaShoppingBag/></IconButton>
-                    <IconButton><FaBell/></IconButton>
+                    <IconButton onClick={()=>{
+                        navigate('/favorite')
+                    }}><FaBell/></IconButton>
                     <IconButton><FaUser/></IconButton>
                 </FlexContainer>
             </ActionContainer>

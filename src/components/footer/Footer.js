@@ -10,7 +10,7 @@ import Logo from "../logo/Logo";
 
 function Footer(props) {
     return (
-        <footer>
+        <footer className='m-25'>
             <ContentContainer>
                 <GridFooterContainer className='mb-30'>
                     <FooterSocialContainer>

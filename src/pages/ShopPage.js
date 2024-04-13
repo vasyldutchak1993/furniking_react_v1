@@ -1,174 +1,84 @@
-import React, {useEffect, useState} from 'react';
-import {ProductsListContainer} from "../components/products_list_view/productsView.styled";
+import React, {useEffect, useMemo, useState} from 'react';
+import {PaginationContainer, ProductsListContainer} from "../components/products_list_view/productsView.styled";
 import ProductCard from "../components/product_card/ProductCard";
-import product_1 from "../assets/img/product_1.png";
-import product_2 from "../assets/img/product_2.png";
-import product_3 from "../assets/img/product_3.png";
-import product_4 from "../assets/img/product_4.png";
-import product_5 from "../assets/img/product_5.png";
-import product_6 from "../assets/img/product_6.png";
-import product_7 from "../assets/img/product_7.png";
 import SectionTitle from "../components/section_title/SectionTitle";
-const data = [
-    {
-        id: "1",
-        chip: {
-            type: "sale",
-            value: "Sale"
-        },
-        img: product_1,
-        productType: "Chair",
-        productTitle: "Minimal LCD chair",
-        price: {
-            defaultPrice: "250",
-            currentPrice: "180"
-        },
-        rating: 5
-    }, {
-        id: "2",
-        chip: {
-            type: "new",
-            value: "New"
-        },
-        img: product_2,
-        productType: "Sofa",
-        productTitle: "Modern Sofa",
-        price: {
-            defaultPrice: "150",
-            currentPrice: "120"
-        },
-        rating: 4
-    }, {
-        id: "3",
-        chip: {
-            type: "discount",
-            value: "-30%"
-        },
-        img: product_3,
-        productType: "Sofa",
-        productTitle: "Microfiber Sofa",
-        price: {
-            defaultPrice: "150",
-            currentPrice: "130"
-        },
-        rating: 3
-    }, {
-        id: product_4,
-        chip: {
-            type: "sale",
-            value: "Sale"
-        },
-        img: product_5,
-        productType: "Tabble",
-        productTitle: "Wood Coffee Tables",
-        price: {
-            defaultPrice: "120",
-            currentPrice: "100"
-        },
-        rating: 4
-    }, {
-        id: product_5,
-        chip: {
-            type: "sale",
-            value: "Sale"
-        },
-        img: product_6,
-        productType: "Bench",
-        productTitle: "Amalia Cowhide Bench",
-        price: {
-            defaultPrice: "150",
-            currentPrice: "130"
-        },
-        rating: 5
-    }, {
-        id: "5",
-        chip: {
-            type: "new",
-            value: "New"
-        },
-        img: product_6,
-        productType: "Furniture",
-        productTitle: "Delicia 3 Piece Living Room",
-        price: {
-            defaultPrice: "150",
-            currentPrice: "120"
-        },
-        rating: 5
-    }, {
-        id: "6",
-        chip: {
-            type: "new",
-            value: "New"
-        },
-        img: product_7,
-        productType: "Storage",
-        productTitle: "Juno-Hinged Lid Storage",
-        price: {
-            defaultPrice: "250",
-            currentPrice: "235"
-        },
-        rating: 5
-    }, {
-        id: "7",
-        chip: {
-            type: "new",
-            value: "New"
-        },
-        img: product_2,
-        productType: "Sofa",
-        productTitle: "Modern Sofa",
-        price: {
-            defaultPrice: "150",
-            currentPrice: "120"
-        },
-        rating: 4
-    }, {
-        id: "8",
-        chip: {
-            type: "new",
-            value: "New"
-        },
-        img: product_2,
-        productType: "Sofa",
-        productTitle: "Modern Sofa",
-        price: {
-            defaultPrice: "150",
-            currentPrice: "120"
-        },
-        rating: 4
-    }, {
-        id: "9",
-        chip: {
-            type: "new",
-            value: "New"
-        },
-        img: product_2,
-        productType: "Sofa",
-        productTitle: "Modern Sofa",
-        price: {
-            defaultPrice: "150",
-            currentPrice: "120"
-        },
-        rating: 4
-    },
-]
+import {getAllProducts} from '../services'
+import {FaArrowRight} from "react-icons/fa";
+import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
+import ProductCardLoading from "../components/product_card/ProductCardLoading";
+import {generateMockArray} from "../utils/mockGenerator";
+import {LOADING_STATUS} from "../utils/loadingStatus";
+
 function ShopPage(props) {
     const [products, setProducts] = useState([])
+    const [limit, setLimit] = useState(8)
+    const [currentPage, setCurrentPage] = useState(1)
+    const [totalPages, setTotalPages] = useState(3)
+    const [loadingStatus,setLoadingStatus]=useState(LOADING_STATUS.IDLE)
+    const [error,setError]=useState(null)
+    const handleChange = (event) => {
+        setCurrentPage(parseInt(event.target.value))
+    }
+    const handleIncrement = () => {
+        if (currentPage >= totalPages) return
+        setCurrentPage(prevState => prevState + 1)
+    }
+    const handleDecrement = () => {
+        if (currentPage <= 1) return
+        setCurrentPage(prevState => prevState - 1)
+    }
+
+    const getPreloadedCards = useMemo(() => {
+        return generateMockArray(limit).map((_, idx) =>(<ProductCardLoading key={idx}/>))
+    },[limit])
 
 
     useEffect(() => {
-        setProducts(data)
-    }, [])
+        setLoadingStatus(LOADING_STATUS.PENDING)
+        getAllProducts(currentPage, limit)
+            .then(response => {
+                setProducts(response.data)
+                setLoadingStatus(LOADING_STATUS.RESOLVED)
+            })
+            .catch(e => {
+                setLoadingStatus(LOADING_STATUS.REJECTED)
+                setError(e)
+                console.log(e)
+            })
+    }, [currentPage, setProducts,limit,setLoadingStatus])
 
     return (
         <>
             <SectionTitle>OUR PRODUCTS</SectionTitle>
-            <ProductsListContainer>
+            {loadingStatus === LOADING_STATUS.IDLE && <ProductsListContainer>
+                {getPreloadedCards}
+            </ProductsListContainer>}
+            {loadingStatus === LOADING_STATUS.PENDING && <ProductsListContainer>
+                {getPreloadedCards}
+            </ProductsListContainer>}
+            {loadingStatus === LOADING_STATUS.RESOLVED && <ProductsListContainer>
                 {products.length > 0 && products.map(({productTitle, chip, img, price, rating, id, productType}) => (
                     <ProductCard key={id} productTitle={productTitle} chip={chip} img={img} price={price}
                                  rating={rating} id={id} productType={productType}/>
                 ))}
-            </ProductsListContainer>
+            </ProductsListContainer>}
+            {loadingStatus === LOADING_STATUS.REJECTED && <h1>Ups some error {error.message}</h1>}
+            <PaginationContainer>
+                <button type='button' className='btn btn-link' onClick={handleIncrement}>
+                    <span>Next page</span> <FaArrowRight/>
+                </button>
+                <span className='text'>Page</span>
+                <div className='current_page'>
+                    <input type="number" value={currentPage} onChange={handleChange} readOnly/>
+                </div>
+                <span className='text'>of {totalPages}</span>
+                <div className="btn-pagination-box">
+                    <button type='button' className='btn btn-pagination' onClick={handleDecrement}><IoIosArrowBack/>
+                    </button>
+                    <button type='button' className='btn btn-pagination' onClick={handleIncrement}><IoIosArrowForward/>
+                    </button>
+                </div>
+            </PaginationContainer>
         </>
     );
 }
